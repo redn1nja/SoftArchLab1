@@ -31,6 +31,7 @@ RUN adduser \
 USER appuser
 COPY --from=build /bin/server /bin/
 ENV ROCKET_ADDRESS=0.0.0.0
+ENV ROCKET_LOG_LEVEL=normal
 EXPOSE 3000
 EXPOSE 8000
 CMD ["/bin/server", "http://logger:8000", "http://message:5000"]

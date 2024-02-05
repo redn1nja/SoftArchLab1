@@ -85,5 +85,6 @@ ENV ROCKET_ADDRESS=0.0.0.0
 # Expose the port that the application listens on.
 EXPOSE 5000
 
+ENV ROCKET_LOG_LEVEL=normal
 # What the container should run when it is started.
 CMD ["/bin/server"]
