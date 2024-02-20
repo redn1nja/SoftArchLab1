@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="hazel_client"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\hazelcast-cpp-client\;CMake Files\..\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Boost-1.83.0\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_headers-1.83.0\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_thread-1.83.0\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_chrono-1.83.0\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hazel_client">
+				<Option output="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/hazel_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_THREAD_VERSION=5"/>
+					<Add option="-DBOOST_THREAD_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_NO_LIB"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/clang/16/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 hazel_client"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hazel_client/fast">
+				<Option output="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/hazel_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_THREAD_VERSION=5"/>
+					<Add option="-DBOOST_THREAD_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_NO_LIB"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/clang/16/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 hazel_client/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="locks_1">
+				<Option output="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/locks_1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DNOLOCKS"/>
+					<Add option="-DBOOST_THREAD_VERSION=5"/>
+					<Add option="-DBOOST_THREAD_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_NO_LIB"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/clang/16/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 locks_1"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="locks_1/fast">
+				<Option output="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/locks_1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DNOLOCKS"/>
+					<Add option="-DBOOST_THREAD_VERSION=5"/>
+					<Add option="-DBOOST_THREAD_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_NO_LIB"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/clang/16/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 locks_1/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="locks_2">
+				<Option output="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/locks_2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DLOCKS_PESSIMISTIC_ENABLED"/>
+					<Add option="-DBOOST_THREAD_VERSION=5"/>
+					<Add option="-DBOOST_THREAD_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_NO_LIB"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/clang/16/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 locks_2"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="locks_2/fast">
+				<Option output="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/locks_2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DLOCKS_PESSIMISTIC_ENABLED"/>
+					<Add option="-DBOOST_THREAD_VERSION=5"/>
+					<Add option="-DBOOST_THREAD_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_NO_LIB"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/clang/16/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 locks_2/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="locks_3">
+				<Option output="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/locks_3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DLOCKS_OPTIMISTIC_ENABLED"/>
+					<Add option="-DBOOST_THREAD_VERSION=5"/>
+					<Add option="-DBOOST_THREAD_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_NO_LIB"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/clang/16/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 locks_3"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="locks_3/fast">
+				<Option output="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/locks_3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DLOCKS_OPTIMISTIC_ENABLED"/>
+					<Add option="-DBOOST_THREAD_VERSION=5"/>
+					<Add option="-DBOOST_THREAD_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_NO_LIB"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/clang/16/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 locks_3/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="queue_r">
+				<Option output="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/queue_r" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_THREAD_VERSION=5"/>
+					<Add option="-DBOOST_THREAD_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_NO_LIB"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/clang/16/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 queue_r"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="queue_r/fast">
+				<Option output="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/queue_r" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_THREAD_VERSION=5"/>
+					<Add option="-DBOOST_THREAD_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_NO_LIB"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/clang/16/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 queue_r/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="queue_w">
+				<Option output="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/queue_w" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_THREAD_VERSION=5"/>
+					<Add option="-DBOOST_THREAD_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_NO_LIB"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/clang/16/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 queue_w"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="queue_w/fast">
+				<Option output="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/queue_w" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DBOOST_THREAD_VERSION=5"/>
+					<Add option="-DBOOST_THREAD_NO_LIB"/>
+					<Add option="-DBOOST_THREAD_DYN_LINK"/>
+					<Add option="-DBOOST_CHRONO_NO_LIB"/>
+					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/clang/16/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 queue_w/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-debug-clang/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/src/locks_main.cpp">
+			<Option target="locks_1"/>
+			<Option target="locks_2"/>
+			<Option target="locks_3"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/src/main.cpp">
+			<Option target="hazel_client"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/src/queue_r_main.cpp">
+			<Option target="queue_r"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/src/queue_w_main.cpp">
+			<Option target="queue_w"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/local/lib/cmake/hazelcast-cpp-client/hazelcast-cpp-client-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\hazelcast-cpp-client\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/local/lib/cmake/hazelcast-cpp-client/hazelcast-cpp-client-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\hazelcast-cpp-client\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/local/lib/cmake/hazelcast-cpp-client/hazelcast-cpp-client-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\hazelcast-cpp-client\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/local/lib/cmake/hazelcast-cpp-client/hazelcast-cpp-client-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\local\lib\cmake\hazelcast-cpp-client\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/BoostDetectToolset-1.83.0.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/Boost-1.83.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Boost-1.83.0\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/Boost-1.83.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Boost-1.83.0\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/boost_headers-1.83.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_headers-1.83.0\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/boost_headers-1.83.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_headers-1.83.0\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/boost_thread-1.83.0/boost_thread-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_thread-1.83.0\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/boost_thread-1.83.0/boost_thread-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_thread-1.83.0\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/boost_thread-1.83.0/libboost_thread-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_thread-1.83.0\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/boost_thread-1.83.0/libboost_thread-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_thread-1.83.0\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/boost_chrono-1.83.0/boost_chrono-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_chrono-1.83.0\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/boost_chrono-1.83.0/boost_chrono-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_chrono-1.83.0\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/boost_chrono-1.83.0/libboost_chrono-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_chrono-1.83.0\"/>
+		</Unit>
+		<Unit filename="/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/../../../../../../../usr/lib/cmake/boost_chrono-1.83.0/libboost_chrono-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\boost_chrono-1.83.0\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

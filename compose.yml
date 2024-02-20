@@ -1,0 +1,83 @@
+services:
+  hazelcast1:
+    image: hazelcast/hazelcast:5.3.6
+    networks:
+      - hazelcast-network
+    environment:
+      - HZ_CLUSTERNAME=hello-world
+      - HZ_QUEUE_QUEUE_MAXSIZE=10
+
+  hazelcast2:
+    image: hazelcast/hazelcast:5.3.6
+    networks:
+      - hazelcast-network
+    environment:
+      - HZ_CLUSTERNAME=hello-world
+      - HZ_QUEUE_QUEUE_MAXSIZE=10
+
+  hazelcast3:
+    image: hazelcast/hazelcast:5.3.6
+    networks:
+      - hazelcast-network
+    environment:
+      - HZ_CLUSTERNAME=hello-world
+      - HZ_QUEUE_QUEUE_MAXSIZE=10
+    
+  hazelcast-client:
+    build:
+      context: ./hazelcast-client
+      target: final_client
+    networks:
+      - hazelcast-network
+    profiles: ["map"]
+
+  hz-management:
+    image: hazelcast/management-center:5.3.3
+    networks:
+      - hazelcast-network
+    ports:
+      - 8080:8080
+
+  hz-data-race-client:
+    build:
+      context: ./hazelcast-client
+      target: final_locks1
+    networks:
+      - hazelcast-network
+    profiles: ["race"]
+
+  hz-mutex-client:
+    build:
+      context: ./hazelcast-client
+      target: final_locks2
+    networks:
+      - hazelcast-network
+    profiles: ["mutex"]
+
+  hz-lock-free-client:
+    build:
+      context: ./hazelcast-client
+      target: final_locks3
+    networks:
+      - hazelcast-network
+    profiles: ["free"]
+
+  hz-queue-writer:
+    build:
+      context: ./hazelcast-client
+      target: queue_w
+    networks:
+      - hazelcast-network
+    profiles: ["queue", "full"]
+
+  hz-queue-reader:
+    build: 
+      context: ./hazelcast-client
+      target: queue_r
+    networks:
+      - hazelcast-network
+    profiles: ["queue"]
+
+networks:
+  hazelcast-network:
+    external: true
