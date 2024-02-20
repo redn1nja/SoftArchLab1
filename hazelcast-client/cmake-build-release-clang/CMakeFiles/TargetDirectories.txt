@@ -1,8 +1,0 @@
-/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-release-clang/CMakeFiles/hazel_client.dir
-/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-release-clang/CMakeFiles/locks_1.dir
-/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-release-clang/CMakeFiles/locks_2.dir
-/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-release-clang/CMakeFiles/locks_3.dir
-/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-release-clang/CMakeFiles/queue_r.dir
-/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-release-clang/CMakeFiles/queue_w.dir
-/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-release-clang/CMakeFiles/edit_cache.dir
-/home/ostap/Documents/Study/SoftwareArchitecture/lab2/hazelcast-client/cmake-build-release-clang/CMakeFiles/rebuild_cache.dir
