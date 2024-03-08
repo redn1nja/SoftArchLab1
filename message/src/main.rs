@@ -7,5 +7,5 @@ fn hello() -> &'static str {
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().configure(rocket::Config::figment().merge(("port", 5000))).mount("/", routes![hello])
+    rocket::build().configure(rocket::Config::figment().merge(("port", 5001))).mount("/", routes![hello])
 }

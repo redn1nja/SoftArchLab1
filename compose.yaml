@@ -1,28 +1,79 @@
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Docker compose reference guide at
-# https://docs.docker.com/go/compose-spec-reference/
-
-# Here the instructions define your application as a service called "server".
-# This service is built from the Dockerfile in the current directory.
-# You can add other services your application may depend on here, such as a
-# database or a cache. For examples, see the Awesome Compose repository:
-# https://github.com/docker/awesome-compose
 services:
+  hz1:
+    image: hazelcast/hazelcast:5.3.6
+    networks:
+      - hazelcast-network
+    environment:
+      - HZ_CLUSTERNAME=hello-world
+
+  hz2:
+    image: hazelcast/hazelcast:5.3.6
+    networks:
+      - hazelcast-network
+    environment:
+      - HZ_CLUSTERNAME=hello-world
+
+  hz3:
+    image: hazelcast/hazelcast:5.3.6
+    networks:
+      - hazelcast-network
+    environment:
+      - HZ_CLUSTERNAME=hello-world
+
   facade:
     build:
       context: ./facade
       target: final
+    networks:
+      - hazelcast-network
     ports:
       - 3000:3000
-  logger:
+
+  logger-1:
+    environment:
+      - ADDR=hz1
+      - PORT=3001
+    networks:
+      - hazelcast-network
     build:
       context: ./logging
       target: final
     ports:
-      - 8000:8000
+      - 3001:3001
+
+  logger-2:
+    environment:
+      - ADDR=hz2
+      - PORT=5000
+    networks:
+      - hazelcast-network
+    build:
+      context: ./logging
+      target: final
+    ports:
+      - 5000:5000
+
+  logger-3:
+    environment:
+      - ADDR=hz3
+      - PORT=7000
+    networks:
+      - hazelcast-network
+    build:
+      context: ./logging
+      target: final
+    ports:
+      - 7000:7000
+
   message:
     build:
       context: ./message
       target: final
+    networks:
+      - hazelcast-network
     ports:
-      - 5000:5000
+      - 5001:5001
+
+networks:
+  hazelcast-network:
+    external: true

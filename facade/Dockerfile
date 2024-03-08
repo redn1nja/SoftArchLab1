@@ -32,5 +32,8 @@ USER appuser
 COPY --from=build /bin/server /bin/
 ENV ROCKET_ADDRESS=0.0.0.0
 EXPOSE 3000
-EXPOSE 8000
-CMD ["/bin/server", "http://logger:8000", "http://message:5000"]
+EXPOSE 3001
+EXPOSE 5001
+EXPOSE 5000
+EXPOSE 7000
+CMD ["/bin/server", "http://message:5001", "http://logger-1:3001", "http://logger-2:5000", "http://logger-3:7000"]
