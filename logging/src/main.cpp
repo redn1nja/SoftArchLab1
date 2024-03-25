@@ -25,6 +25,7 @@ int main(int argc, char* argv[])
     });
 
     CROW_ROUTE(app, "/").methods(crow::HTTPMethod::POST)([&map, &address](const crow::request &req){
+        std::cout<<req.body<<std::endl;
         auto x = crow::json::load(req.body);
         if (!x && !x.has("uuid") && !x.has("msg"))
             return crow::response(400);

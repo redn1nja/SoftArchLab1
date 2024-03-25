@@ -1,4 +1,10 @@
 services:
+  hz:
+    image: hazelcast/hazelcast:5.3.6
+    networks:
+      - hazelcast-network
+    environment:
+      - HZ_CLUSTERNAME=q
   hz1:
     image: hazelcast/hazelcast:5.3.6
     networks:
@@ -21,6 +27,9 @@ services:
       - HZ_CLUSTERNAME=hello-world
 
   facade:
+    environment:
+      - ADDR=hz
+      - PORT=3000
     build:
       context: ./facade
       target: final
@@ -65,7 +74,10 @@ services:
     ports:
       - 7000:7000
 
-  message:
+  message-1:
+    environment:
+      - ADDR=hz
+      - PORT=5001
     build:
       context: ./message
       target: final
@@ -73,6 +85,30 @@ services:
       - hazelcast-network
     ports:
       - 5001:5001
+
+  message-2:
+    environment:
+      - ADDR=hz
+      - PORT=5002
+    build:
+      context: ./message
+      target: final
+    networks:
+      - hazelcast-network
+    ports:
+      - 5002:5002
+
+  message-3:
+    environment:
+      - ADDR=hz
+      - PORT=5003
+    build:
+      context: ./message
+      target: final
+    networks:
+      - hazelcast-network
+    ports:
+      - 5003:5003
 
 networks:
   hazelcast-network:

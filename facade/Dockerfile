@@ -1,39 +1,22 @@
 # syntax=docker/dockerfile:1
-ARG RUST_VERSION=1.75.0
-ARG APP_NAME=facade
-FROM --platform=$BUILDPLATFORM tonistiigi/xx:1.3.0 AS xx
-FROM --platform=$BUILDPLATFORM rust:${RUST_VERSION}-alpine AS build
-ARG APP_NAME
-WORKDIR /app
-COPY --from=xx / /
-RUN apk add --no-cache clang lld musl-dev git file pkgconfig openssl libressl-dev
-ARG TARGETPLATFORM
-RUN xx-apk add --no-cache musl-dev gcc
-RUN --mount=type=bind,source=src,target=src \
-    --mount=type=bind,source=Cargo.toml,target=Cargo.toml \
-    --mount=type=bind,source=Cargo.lock,target=Cargo.lock \
-    --mount=type=cache,target=/app/target/,id=rust-cache-${APP_NAME}-${TARGETPLATFORM} \
-    --mount=type=cache,target=/usr/local/cargo/git/db \
-    --mount=type=cache,target=/usr/local/cargo/registry/ \
-xx-cargo build --locked --release --target-dir ./target && \
-cp ./target/$(xx-cargo --print-target-triple)/release/$APP_NAME /bin/server && \
-xx-verify /bin/server
-FROM alpine:3.18 AS final
-ARG UID=10001
-RUN adduser \
-    --disabled-password \
-    --gecos "" \
-    --home "/nonexistent" \
-    --shell "/sbin/nologin" \
-    --no-create-home \
-    --uid "${UID}" \
-    appuser
-USER appuser
-COPY --from=build /bin/server /bin/
-ENV ROCKET_ADDRESS=0.0.0.0
-EXPOSE 3000
-EXPOSE 3001
-EXPOSE 5001
-EXPOSE 5000
-EXPOSE 7000
-CMD ["/bin/server", "http://message:5001", "http://logger-1:3001", "http://logger-2:5000", "http://logger-3:7000"]
+FROM ubuntu:20.04 as base
+ARG DEBIAN_FRONTEND=noninteractive
+
+# Install dependencies
+RUN apt-get update && apt-get install -y curl g++ cmake make pkg-config libboost-all-dev git libssl-dev libmbedtls-dev; \
+    mkdir /usr/src && cd /usr/src; \
+    curl -L https://github.com/CrowCpp/Crow/releases/download/v1.0%2B5/crow-v1.0+5.deb -o crow.deb; \
+    dpkg -i crow.deb; \
+    curl -L https://github.com/hazelcast/hazelcast-cpp-client/archive/refs/tags/v5.3.0.tar.gz | tar xzf -; \
+            cd hazelcast-cpp-client-5.3.0; \
+            cmake -DCMAKE_BUILD_TYPE=Release .; make; make install
+
+COPY . /usr/src/
+
+FROM base as build
+WORKDIR /usr/src/
+RUN cmake -DCMAKE_BUILD_TYPE=Release . && make
+
+FROM build as final
+EXPOSE $PORT
+CMD ["sh", "-c", "/usr/src/facade $ADDR $PORT 3 http://logger-1:3001 http://logger-2:5000 http://logger-3:7000 http://message-1:5001 http://message-2:5002 http://message-3:5003"]
