@@ -1,4 +1,17 @@
 services:
+  consul:
+    build:
+      context: ./consul
+      target: main
+    networks:
+      - hazelcast-network
+    ports:
+      - 8500:8500
+    healthcheck:
+      test: consul kv get hazelcast/queue
+      interval: 1s
+      timeout: 60s
+      start_period: 20s
   hz:
     image: hazelcast/hazelcast:5.3.6
     networks:
@@ -36,80 +49,42 @@ services:
     networks:
       - hazelcast-network
     ports:
-      - 3000:3000
+      - 3000-3100:3000
+    depends_on:
+      consul:
+        condition: service_healthy
 
-  logger-1:
+  logger:
     environment:
       - ADDR=hz1
-      - PORT=3001
+      - PORT=4000
     networks:
       - hazelcast-network
     build:
       context: ./logging
       target: final
     ports:
-      - 3001:3001
+      - 4000-4100:4000
+    depends_on:
+      consul:
+        condition: service_healthy
 
-  logger-2:
+  message:
     environment:
-      - ADDR=hz2
       - PORT=5000
-    networks:
-      - hazelcast-network
-    build:
-      context: ./logging
-      target: final
-    ports:
-      - 5000:5000
-
-  logger-3:
-    environment:
-      - ADDR=hz3
-      - PORT=7000
-    networks:
-      - hazelcast-network
-    build:
-      context: ./logging
-      target: final
-    ports:
-      - 7000:7000
-
-  message-1:
-    environment:
-      - ADDR=hz
-      - PORT=5001
     build:
       context: ./message
       target: final
     networks:
       - hazelcast-network
     ports:
-      - 5001:5001
+      - 5000-5100:5000
+    depends_on:
+      consul:
+        condition: service_healthy
 
-  message-2:
-    environment:
-      - ADDR=hz
-      - PORT=5002
-    build:
-      context: ./message
-      target: final
-    networks:
-      - hazelcast-network
-    ports:
-      - 5002:5002
-
-  message-3:
-    environment:
-      - ADDR=hz
-      - PORT=5003
-    build:
-      context: ./message
-      target: final
-    networks:
-      - hazelcast-network
-    ports:
-      - 5003:5003
 
 networks:
   hazelcast-network:
     external: true
+
