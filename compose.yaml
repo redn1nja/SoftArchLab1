@@ -1,28 +1,90 @@
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Docker compose reference guide at
-# https://docs.docker.com/go/compose-spec-reference/
-
-# Here the instructions define your application as a service called "server".
-# This service is built from the Dockerfile in the current directory.
-# You can add other services your application may depend on here, such as a
-# database or a cache. For examples, see the Awesome Compose repository:
-# https://github.com/docker/awesome-compose
 services:
+  consul:
+    build:
+      context: ./consul
+      target: main
+    networks:
+      - hazelcast-network
+    ports:
+      - 8500:8500
+    healthcheck:
+      test: consul kv get hazelcast/queue
+      interval: 1s
+      timeout: 60s
+      start_period: 20s
+  hz:
+    image: hazelcast/hazelcast:5.3.6
+    networks:
+      - hazelcast-network
+    environment:
+      - HZ_CLUSTERNAME=q
+  hz1:
+    image: hazelcast/hazelcast:5.3.6
+    networks:
+      - hazelcast-network
+    environment:
+      - HZ_CLUSTERNAME=hello-world
+
+  hz2:
+    image: hazelcast/hazelcast:5.3.6
+    networks:
+      - hazelcast-network
+    environment:
+      - HZ_CLUSTERNAME=hello-world
+
+  hz3:
+    image: hazelcast/hazelcast:5.3.6
+    networks:
+      - hazelcast-network
+    environment:
+      - HZ_CLUSTERNAME=hello-world
+
   facade:
+    environment:
+      - ADDR=hz
+      - PORT=3000
     build:
       context: ./facade
       target: final
+    networks:
+      - hazelcast-network
     ports:
-      - 3000:3000
+      - 3000-3100:3000
+    depends_on:
+      consul:
+        condition: service_healthy
+
   logger:
+    environment:
+      - ADDR=hz1
+      - PORT=4000
+    networks:
+      - hazelcast-network
     build:
       context: ./logging
       target: final
     ports:
-      - 8000:8000
+      - 4000-4100:4000
+    depends_on:
+      consul:
+        condition: service_healthy
+
   message:
+    environment:
+      - PORT=5000
     build:
       context: ./message
       target: final
+    networks:
+      - hazelcast-network
     ports:
-      - 5000:5000
+      - 5000-5100:5000
+    depends_on:
+      consul:
+        condition: service_healthy
+
+
+networks:
+  hazelcast-network:
+    external: true
+
