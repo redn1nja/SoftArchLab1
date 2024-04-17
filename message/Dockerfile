@@ -1,3 +1,4 @@
+
 FROM common as build
 COPY . /usr/src/
 WORKDIR /usr/src/
